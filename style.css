@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+:root {
+    --body-background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    --calc-background: #ffffff;
+    --border-color: #D1E8F0;
+    --text-color: #333;
+    --main-color: #097790;
+    --sec-color: #0B94A9;
+}
+body.dark-mode {
+    --body-background: #2c2f33;
+    --calc-background: #36393f;
+    --border-color: #40444b;
+    --text-color: white;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+body {
+    min-height: 100vh;
+    padding: 0 15px;
+    background: var(--body-background);
+}
+
+/* start header */
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.mode {
+    width: 60px;
+    height: 30px;
+    padding: 0 8px;
+    background-image: url("imgs/lightmode.webp");
+    background-size: contain;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.mode i {
+    color: white;
+    font-size: 16px;
+}
+.mode .circle {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(25px);
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.4), -5px -5px 15px rgba(255, 255, 255, 0.4);
+}
+.mode .circle:hover {
+    box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.4), -5px -5px 30px rgba(255, 255, 255, 0.4);
+}
+/* end header */
+/* start calculator */
+.calculator {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    margin: 70px auto 0;
+    background-color: var(--calc-background);
+    border-radius: 15px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+form div {
+    display: flex;
+    justify-content: space-between;
+}
+form input {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 23%;
+    padding: 10px;
+    background-color: var(--calc-background);
+    border-radius: 15px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border:1px solid var(--border-color)
+}
+form div:not(:first-of-type) input:active {
+    transform: scale(0.85);
+}
+.calculator .display input {
+    width: 100%;
+    padding:20px 15px;
+    text-align: right;
+    cursor:auto;
+    box-shadow: 0 2px 8px #0001;
+    border-radius: 10px;
+    font-size: 20px;
+    color: var(--text-color);
+}
+.operation {
+    background: linear-gradient(135deg, var(--main-color) 60%, var(--sec-color) 100%);
+    color: #fff;
+    font-weight: bold;
+}
+
+.operation:hover {
+    background: linear-gradient(135deg, var(--sec-color) 60%, var(--main-color) 100%);
+}
+.operation.equal{
+    width: 46%;
+}
