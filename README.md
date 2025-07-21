@@ -14,7 +14,7 @@ A beginner-friendly calculator project built with **HTML**, **CSS**, and **JavaS
 
 ## Demo
 
-[🔗 Live Demo]() 
+[🔗 Live Demo](https://engnada-s.github.io/calculator-app/) 
 
 
 ## How to Use
